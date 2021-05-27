@@ -5,10 +5,11 @@
   "main": "index.js",
   "license": "0BSD",
   "scripts": {
-    "build": "yarn workspace example build"
+    "develop": "gatsby develop --workspace=gatsby-theme-roinerds-website",
+    "storybook": "NODE_ENV=test start-storybook -s ./public -p 6006 --ci --workspace=gatsby-theme-roinerds-website"
   },
   "workspaces": [
-    "gatsby-theme-minimal",
+    "gatsby-theme-roinerds-website",
     "example"
   ]
 }
