@@ -2,7 +2,22 @@ const path = require('path');
 
 module.exports = {
     stories: ["../src/**/*.stories.{js,jsx}"],
-    addons: ["@storybook/addon-docs", "@storybook/addon-actions"],
+    addons: [
+        "@storybook/addon-essentials",
+        "@storybook/addon-links",
+        "@storybook/addon-storysource",
+        "@storybook/addon-a11y",
+        'storybook-fixtures',
+        'storybook-mobile',
+        'storybook-addon-performance/register',
+        // '@react-theming/storybook-addon',
+        'storybook-addon-paddings',
+        'storybook-addon-outline',
+    ],
+    'presets': [
+        'storybook-addon-deps/preset',
+        'storybook-addon-deps/preset-explorer',
+    ],
     webpackFinal: async (config) => {
         config.module.rules.push({
                 // Config for js and jsx files
